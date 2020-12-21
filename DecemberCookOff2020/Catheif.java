@@ -15,7 +15,7 @@ public class Catheif {
 			int k = sr.nextInt();
 			int n = sr.nextInt();
 			
-			if((Math.abs(x-y)/k)%2 == 0) {
+			if(((Math.abs(x-y)+(x-0))/k)%2 == 0) {
 				ans.add("YES");
 			}else {
 				ans.add("NO");
