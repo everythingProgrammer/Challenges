@@ -7,7 +7,9 @@ public class EncodedString {
 		String ans = "";
 		for(int i = 0 ; i<binary.length() ; i+=4)
 		{
-			ans += (char) (97+ (8*Integer.parseInt(binary.charAt(i)+"")) + (4*Integer.parseInt(binary.charAt(i+1)+"")) + (2*Integer.parseInt(binary.charAt(i+2)+"") ) + (1*Integer.parseInt(binary.charAt(i+3)+"")) );
+//			ans += (char) (97+ (8*Integer.parseInt(binary.charAt(i)+"")) + (4*Integer.parseInt(binary.charAt(i+1)+"")) + (2*Integer.parseInt(binary.charAt(i+2)+"") ) + (1*Integer.parseInt(binary.charAt(i+3)+"")) );
+			
+			ans += (char) Integer.parseInt( binary.substring(i,i+4) ,10);
 //			System.out.println(  (97+(8*Integer.parseInt(binary.charAt(i)+"")) + (4*Integer.parseInt(binary.charAt(i+1)+"")) + (2*Integer.parseInt(binary.charAt(i+2)+"") ) + (1*Integer.parseInt(binary.charAt(i+3)+"")) ));
 		}
 		
