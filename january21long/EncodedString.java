@@ -9,7 +9,7 @@ public class EncodedString {
 		{
 //			ans += (char) (97+ (8*Integer.parseInt(binary.charAt(i)+"")) + (4*Integer.parseInt(binary.charAt(i+1)+"")) + (2*Integer.parseInt(binary.charAt(i+2)+"") ) + (1*Integer.parseInt(binary.charAt(i+3)+"")) );
 			
-			ans += (char) Integer.parseInt( binary.substring(i,i+4) ,10);
+			ans += (char) (97+Integer.parseInt( binary.substring(i,i+4) ,2));
 //			System.out.println(  (97+(8*Integer.parseInt(binary.charAt(i)+"")) + (4*Integer.parseInt(binary.charAt(i+1)+"")) + (2*Integer.parseInt(binary.charAt(i+2)+"") ) + (1*Integer.parseInt(binary.charAt(i+3)+"")) ));
 		}
 		
