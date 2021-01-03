@@ -2,6 +2,11 @@ package january21long;
 import java.util.*;
 public class EncodedString {
 	
+	HashMap<String, String> codes = new HashMap<>();
+	
+	
+	
+	
 	public static String decode(String binary) {
 		
 		String ans = "";
