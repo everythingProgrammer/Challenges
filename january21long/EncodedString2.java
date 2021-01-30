@@ -6,14 +6,14 @@ public class EncodedString2 {
 
 	static HashMap<String, Character> codes = new HashMap<>();
 
-	public static String decode(String code) {
+	public static void decode(String code) {
 
 		String ans = "";
 		for (int i = 0; i < code.length(); i += 4) {
 
 			String bin = code.substring(i, i + 4);
 			if (codes.containsKey(bin)) {
-				System.out.println(".");
+//				System.out.println(".");
 				ans += codes.get(bin);
 			} else {
 				char ch = (char) (97 + Integer.parseInt(bin, 2));
@@ -23,7 +23,7 @@ public class EncodedString2 {
 
 		}
 
-		return ans;
+		System.out.println(ans);
 
 	}
 
@@ -56,9 +56,9 @@ public class EncodedString2 {
 				T--;
 			}
 			for (String st : str)
-				System.out.println(decode(st));
+				decode(st);
 		} catch (Exception e) {
-
+			return;
 		}
 
 	}

@@ -17,8 +17,12 @@ public class EncodedString {
 		}
 
 		return ans;
+//		return 0;
 	}
 
+	
+	
+	
 	public static void main(String args[]) throws java.lang.Exception {
 
 		try {
@@ -32,7 +36,7 @@ public class EncodedString {
 				T--;
 			}
 			for (String st : str)
-				System.out.println(decode(st));
+				decode(st);
 		} catch (Exception e) {
 			
 			return;
