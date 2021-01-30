@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ChefDivision2 {
-public static void main(String args[]) throws Exception {
+public static void main(String args[]) throws java.lang.Exception {
 		
 		try {
 		Scanner sr = new Scanner (System.in);
@@ -50,7 +50,7 @@ public static void main(String args[]) throws Exception {
 		for(int a:ans) {
 			System.out.println(a);
 		}
-		
+		sr.close();
 		}
 		catch(Exception e) {
 			
