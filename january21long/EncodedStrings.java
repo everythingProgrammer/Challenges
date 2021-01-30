@@ -1,11 +1,11 @@
 package january21long;
+
 import java.util.*;
+
 public class EncodedStrings {
-	
-	static HashMap<String , Character> codes= new HashMap<>();
-	
-	
-	
+
+	static HashMap<String, Character> codes = new HashMap<>();
+
 	public static void main(String args[]) {
 		codes.put("0000", 'a');
 		codes.put("0001", 'b');
@@ -24,5 +24,5 @@ public class EncodedStrings {
 		codes.put("1110", 'o');
 		codes.put("1111", 'p');
 	}
-	
+
 }
