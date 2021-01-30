@@ -33,30 +33,36 @@ public class FairElections {
 
 		Scanner sr = new Scanner(System.in);
 		ArrayList<Integer> ans = new ArrayList<>();
-		int T = sr.nextInt();
-
-		while (T > 0) {
-			T -= 1;
-			int N = sr.nextInt();
-			int M = sr.nextInt();
-			int joj[] = new int[N];
-			int jaj[] = new int[M];
-			int jojsum = 0;
-			int jajsum = 0;
-			for (int i = 0; i < N; i++) {
-				joj[i] = sr.nextInt();
-				jojsum += joj[i];
+		try {
+			int T = sr.nextInt();
+	
+			while (T > 0) {
+				T -= 1;
+				int N = sr.nextInt();
+				int M = sr.nextInt();
+				int joj[] = new int[N];
+				int jaj[] = new int[M];
+				int jojsum = 0;
+				int jajsum = 0;
+				for (int i = 0; i < N; i++) {
+					joj[i] = sr.nextInt();
+					jojsum += joj[i];
+				}
+				for (int i = 0; i < M; i++) {
+					jaj[i] = sr.nextInt();
+					jajsum += jaj[i];
+				}
+				ans.add(countChanges(joj, jojsum, jaj, jajsum));
 			}
-			for (int i = 0; i < M; i++) {
-				jaj[i] = sr.nextInt();
-				jajsum += jaj[i];
-			}
-			ans.add(countChanges(joj, jojsum, jaj, jajsum));
+	
+			for (int a : ans)
+				System.out.println(a);
+	
 		}
-
-		for (int a : ans)
-			System.out.println(a);
-
+		catch(Exception e) {
+			return;
+		}
 	}
+	
 
 }
