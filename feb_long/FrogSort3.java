@@ -8,10 +8,13 @@ public class FrogSort3 {
 		int count = 0 ; 
 		
 		if(w.length == 2) {
-			if(w[0] < w[1] ) {
+			if(w[0] ==0 && w[1] ==1 ) {
 				return 0;
 			}
-			else {
+			else if(w[0] ==1 && l[0] == 1) {
+				return 2;
+			}
+			else if(w[0] == 1 && l[0] >1) {
 				return 1;
 			}
 		}
@@ -39,7 +42,7 @@ public class FrogSort3 {
 			 * 
 			 * */
 			count = 0;
-			while( a>c || b>c || a>b) {
+			while( c<b || b<a || c<a) {
 				/*if a > b then b has to move forward ( because a cannot go right so b goes left )
 				 * so move b to left unless it is strictly greater than a */
 				while(b<=a) {
@@ -77,7 +80,7 @@ public class FrogSort3 {
 				}
 			}
 			count = 0;
-			while( c>d|| b>c || a>b || a>d || b>d) {
+			while( d<a || d<=b || d<=c  ||c<=b || b<=a || c<=a ) {
 				/*if a > b then b has to move forward ( because a cannot go right so b goes left )
 				 * so move b to left unless it is strictly greater than a */
 				while(b<=a) {
@@ -89,7 +92,7 @@ public class FrogSort3 {
 					c+=l[cind];
 					count++;
 				}
-				while(d<=c || d<=a || d<= b) {
+				while(d<=a || d<= b || d<=c) {
 					d+=l[dind];
 					count ++;
 				}
