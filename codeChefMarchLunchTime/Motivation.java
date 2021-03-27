@@ -6,7 +6,7 @@ public class Motivation {
 		int max_rating = 0;
 		for(int i = 0 ; i<s.length; i++) {
 			if(s[i] <= space && r[i]>max_rating) {
-				max_rating = i;
+				max_rating = r[i];
 			}
 		}
 		return max_rating;
